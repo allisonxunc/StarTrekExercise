@@ -103,8 +103,7 @@ Group 2
 */
 // Q6: Create an array of officers serving as first officers who are also Vulcan
 
-let temp1 = firstOfficers.filter{  vulcanOfficers.contains($0.key) }
-let vulcanFirstOfficers: [Officer] = temp1.map{ Officer(name: $0, ship: $1) }
+let vulcanFirstOfficers: [Officer] = firstOfficers.filter{  vulcanOfficers.contains($0.key) }.map{ Officer(name: $0, ship: $1) }
 print(vulcanFirstOfficers.map{$0.name})
 
 
